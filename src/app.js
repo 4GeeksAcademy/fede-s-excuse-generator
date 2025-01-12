@@ -24,9 +24,13 @@ window.onload = function() {
     let rdmWhat = what[Math.floor(Math.random() * what.length)];
     let rdmWhen = when[Math.floor(Math.random() * when.length)];
 
-    document
-      .getElementById("excuse")
-      .innerHTML(`${rdmWho} ${rdmAction} ${rdmWhat} ${rdmWhen}`);
+    document.getElementById(
+      "excuse"
+    ).innerHTML = `${rdmWho} ${rdmAction} ${rdmWhat} ${rdmWhen}`;
   }
+
+  document.getElementById("btn").onclick = function() {
+    generator();
+  };
   console.log("Hello Rigo from the console!");
 };
